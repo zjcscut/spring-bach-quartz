@@ -1,0 +1,24 @@
+server:
+  port: 9092
+  display-name: creditcard-query-center
+custom-mybatis:
+  typeAliasesPackages: org.throwable.entity
+  mappingsLocations:
+    -
+     classpath*:sqls/*-Mapper.xml
+  configurationLocation: classpath:config/Mybatis-config.xml
+druid:
+  url: jdbc:mysql://localhost:3306/spring-batch?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+  driverClassName: com.mysql.jdbc.Driver
+  username: root
+  password: root
+
+
+
+
+
+
+
+
+
+

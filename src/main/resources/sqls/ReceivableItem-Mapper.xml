@@ -1,0 +1,29 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.throwable.mapper.ReceivableItemMapper">
+
+    <select id="fetchById" resultType="org.throwable.entity.ReceivableItem">
+          SELECT * FROM TB_AT_RECEIVABLE_ITEM WHERE ID = #{id}
+      </select>
+
+    <select id="batchProcess" resultType="org.throwable.entity.ReceivableItem">
+         SELECT * FROM TB_AT_RECEIVABLE_ITEM ORDER BY ID DESC LIMIT #{_skiprows}, #{_pagesize}
+    </select>
+
+    <update id="updateSingle" parameterType="org.throwable.entity.ReceivableItem">
+        UPDATE TB_AT_RECEIVABLE_ITEM
+        <trim prefix="set" suffixOverrides=",">
+            <if test="id!=null">ID=#{id},</if>
+            <if test="itemName!=null">ITEM_NAME=#{itemName},</if>
+            <if test="receiveableAmount!=null">RECEIVEABLE_AMOUNT=#{receiveableAmount},</if>
+            <if test="collecteDate!=null">COLLECTE_DATE=#{collecteDate},</if>
+            <if test="feeRate!=null">FEE_RATE=#{feeRate},</if>
+            <if test="createTime!=null">CREATE_TIME=#{createTime},</if>
+            <if test="updateTime!=null">UPDATE_TIME=#{updateTime},</if>
+        </trim>
+        WHERE id=#{id}
+    </update>
+
+
+</mapper>

@@ -1,0 +1,23 @@
+server:
+  port: 9093
+  display-name: creditcard-query-center
+custom-mybatis:
+  typeAliasesPackages: com.whjk.creditcard.callableloan.entity;com.whjk.creditcard.installment.entity;com.whjk.creditcard.common.entity;
+  mappingsLocations:
+    -
+     classpath*:sqls/common/*-Mapper.xml
+  configurationLocation: classpath:config/Mybatis-config.xml
+druid:
+  url: jdbc:mysql://192.168.1.39:3306/jd_eam_test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+  driverClassName: com.mysql.jdbc.Driver
+  username: root
+  password: 123456
+
+
+
+
+
+
+
+
+

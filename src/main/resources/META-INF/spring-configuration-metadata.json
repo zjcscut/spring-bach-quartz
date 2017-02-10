@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "druid",
+      "type": "org.throwable.config.prop.DruidDataSourceProp",
+      "sourceType": "org.throwable.config.prop.DruidDataSourceProp"
+    },
+    {
+      "name": "custom-mybatis",
+      "type": "org.throwable.config.prop.CustomMybatisProp",
+      "sourceType": "org.throwable.config.prop.CustomMybatisProp"
+    }
+  ],
+  "properties": [
+    {
+      "name": "druid.url",
+      "type": "java.lang.String",
+      "description": "database url",
+      "sourceType": "org.throwable.config.prop.DruidDataSourceProp"
+    },
+    {
+      "name": "druid.driverClassName",
+      "type": "java.lang.String",
+      "description": "database driver class name",
+      "sourceType": "org.throwable.config.prop.DruidDataSourceProp"
+    },
+    {
+      "name": "druid.username",
+      "type": "java.lang.String",
+      "description": "database username",
+      "sourceType": "org.throwable.config.prop.DruidDataSourceProp"
+    },
+    {
+      "name": "druid.password",
+      "type": "java.lang.String",
+      "description": "database password",
+      "sourceType": "org.throwable.config.prop.DruidDataSourceProp"
+    },
+    {
+      "name": "custom-mybatis.typeAliasesPackages",
+      "type": "java.lang.String",
+      "description": "mybatis type aliase package",
+      "sourceType": "org.throwable.config.prop.CustomMybatisProp"
+    },
+    {
+      "name": "custom-mybatis.mappingsLocations",
+      "type": "java.lang.String[]",
+      "description": "mappings classpath locations",
+      "sourceType": "org.throwable.config.prop.CustomMybatisProp"
+    },
+    {
+      "name": "custom-mybatis.configurationLocation",
+      "type": "java.lang.String",
+      "description": "mappings classpath locations",
+      "sourceType": "org.throwable.config.prop.CustomMybatisProp"
+    }
+  ],
+  "hints": []
+}
